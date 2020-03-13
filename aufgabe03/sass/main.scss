@@ -3,29 +3,38 @@
 //sollte diese folgende Zeile zu einer Fehlermeldung führen - kommentieren Sie die folgende und die obere Zeile aus und kommentieren Sie die nachfolgende ein
 @import "compass/css3";
 
-
+$percent: 95%;
 
 @import "base"; /* inkludiert die Datei _base.scss */
 @import "button"; /* inkludiert die Datei _button.scss */
 
+.animation {
+    position:absolute;
+    left:0;
+    top:0;
+
+}
 
 .btn {
-    /* TODO */
+    @include transition-property(padding);
+    @include transition-duration(900ms);
+    @include transition-delay(0ms);
+    @include transition-timing-function(linear);
 
     &.ease-in {
-        /* TODO */
+        @include transition-timing-function(ease-in);
     }
 
     &.ease-out {
-        /* TODO */
+        @include transition-timing-function(ease-out);
     }
 
     &.ease-in-out {
-        /* TODO */
+        @include transition-timing-function(ease-in-out);
     }
 
     &.green {
-        /* TODO */
+        @include transition-property(all);
     }
 
     &.animation {
@@ -39,8 +48,16 @@
 }
 
 body:hover .animation {
-    animation-name:myanimation2;
+    animation-name:myanimation;
     animation-duration:5s;
+}
+
+@keyframes myanimation {
+    0%   {left:0;top:0;}
+    25%  {left:$percent;top:0;}
+    50%  {left:$percent;top:$percent;}
+    75%  {left:0;top:$percent;}
+    100% {left:0;top:0;}
 }
 
 

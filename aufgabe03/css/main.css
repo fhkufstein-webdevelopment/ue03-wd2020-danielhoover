@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* line 5, ../../../../../../../../usr/local/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 5, ../../../../../../../.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -21,45 +21,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../../../../usr/local/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../../../.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../../../../usr/local/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../../../.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../../../../usr/local/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../../../.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../../../../usr/local/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../../../.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../../../../usr/local/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../../../.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../../../../usr/local/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../../../.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../../../../usr/local/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../../../.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../../../../usr/local/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../../../.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
@@ -155,27 +155,61 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* inkludiert die Datei _button.scss */
-/* line 12, ../sass/main.scss */
+/* line 11, ../sass/main.scss */
+.animation {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* line 18, ../sass/main.scss */
 .btn {
-  /* TODO */
+  -moz-transition-property: padding;
+  -o-transition-property: padding;
+  -webkit-transition-property: padding;
+  transition-property: padding;
+  -moz-transition-duration: 900ms;
+  -o-transition-duration: 900ms;
+  -webkit-transition-duration: 900ms;
+  transition-duration: 900ms;
+  -moz-transition-delay: 0ms;
+  -o-transition-delay: 0ms;
+  -webkit-transition-delay: 0ms;
+  transition-delay: 0ms;
+  -moz-transition-timing-function: linear;
+  -o-transition-timing-function: linear;
+  -webkit-transition-timing-function: linear;
+  transition-timing-function: linear;
 }
-/* line 15, ../sass/main.scss */
+/* line 24, ../sass/main.scss */
 .btn.ease-in {
-  /* TODO */
+  -moz-transition-timing-function: ease-in;
+  -o-transition-timing-function: ease-in;
+  -webkit-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
 }
-/* line 19, ../sass/main.scss */
+/* line 28, ../sass/main.scss */
 .btn.ease-out {
-  /* TODO */
+  -moz-transition-timing-function: ease-out;
+  -o-transition-timing-function: ease-out;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
 }
-/* line 23, ../sass/main.scss */
+/* line 32, ../sass/main.scss */
 .btn.ease-in-out {
-  /* TODO */
+  -moz-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
 }
-/* line 27, ../sass/main.scss */
+/* line 36, ../sass/main.scss */
 .btn.green {
-  /* TODO */
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -webkit-transition-property: all;
+  transition-property: all;
 }
-/* line 31, ../sass/main.scss */
+/* line 40, ../sass/main.scss */
 .btn.animation {
   position: absolute;
   left: 0;
@@ -185,13 +219,35 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   animation-timing-function: linear;
 }
 
-/* line 41, ../sass/main.scss */
+/* line 50, ../sass/main.scss */
 body:hover .animation {
-  animation-name: myanimation2;
+  animation-name: myanimation;
   animation-duration: 5s;
 }
 
-/* line 47, ../sass/main.scss */
+@keyframes myanimation {
+  0% {
+    left: 0;
+    top: 0;
+  }
+  25% {
+    left: 95%;
+    top: 0;
+  }
+  50% {
+    left: 95%;
+    top: 95%;
+  }
+  75% {
+    left: 0;
+    top: 95%;
+  }
+  100% {
+    left: 0;
+    top: 0;
+  }
+}
+/* line 64, ../sass/main.scss */
 .btn:hover {
   padding-left: 25px;
   padding-right: 25px;
