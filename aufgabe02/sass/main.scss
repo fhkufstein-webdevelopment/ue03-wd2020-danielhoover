@@ -1,11 +1,21 @@
 @import "compass/reset";
 @import "compass/css3";
 
+$margin: 10px 5px 10px 5px;
+$border: 1px solid #000;
+$red: #d9534f;
+$yellow: #f0ad4e;
+$green: #5cb85c;
+$padding: 5px;
+
+/* b) Vererbung erscheint hier keine sinnvolle zu sein!? */
+
+
 body {
-    -webkit-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased; /* was soll das? */
     -moz-osx-font-smoothing: grayscale;
 
-    font-family:'Open Sans', sans-serif;
+    font-family:'Open Sans', sans-serif; /* was ist das hier eigentlich? */ /* Webfonts ein Begriff?! */
 }
 
 /* dies ist ein kommentar */
@@ -16,18 +26,18 @@ body {
 
 
 input[type="text"],input[type="password"] {
-    border:1px solid #000;
-    padding:5px;
-    margin:10px 5px 10px 5px;
+    border:$border;
+    padding:$padding;
+    margin:$margin;
 
     width: 180px;
 }
 
 input[type="submit"] {
-    border:1px solid #000;
+    border:$border;
     border-radius:0;
     background-color:#fafafa;
-    margin:10px 5px 10px 5px;
+    margin:$margin;
     cursor:pointer;
 }
 
@@ -46,56 +56,46 @@ label {
 }
 
 .feedback {
-    margin:10px 5px 10px 5px;
+    margin:$margin;
     font-size:11px;
     font-weight:600;
 
+    &.error {
+        color:$red;
+    }
+
+    &.warning {
+        color:$yellow;
+    }
+
+    &.success {
+        color:$green;
+    }
+
+    &.error, &.warning, &.success {
+        display: none;
+    }
 }
 
-.feedback.error {
-    color:#d9534f;
-}
-
-.feedback.warning {
-    color:#f0ad4e;
-}
-
-.feedback.success {
-    color:#5cb85c;
-}
 
 .strengthIndicator {
-    margin:10px 5px 10px 5px;
+    margin:$margin;
     width: 200px;
-    padding:5px;
+    padding:$padding;
     height: 13px;
     border:1px solid #d3d3d3;
-}
 
-.strengthIndicator::before {
-    content: "";
-    display: block;
-    height: 100%;
+    &::before {
+        content: "";
+        display: block;
+        height: 100%;
 
-    -moz-transition-property: width;
-    -o-transition-property: width;
-    -webkit-transition-property: width;
-    transition-property: width;
+        @include transition-property(width);
+        @include transition-delay(0);
+        @include transition-duration(250ms);
+        @include transition-timing-function(linear);
 
-    -moz-transition-delay: 0;
-    -o-transition-delay: 0;
-    -webkit-transition-delay: 0;
-    transition-delay: 0;
-
-    -moz-transition-duration: 250ms;
-    -o-transition-duration: 250ms;
-    -webkit-transition-duration: 250ms;
-    transition-duration: 250ms;
-
-    -moz-transition-timing-function: linear;
-    -o-transition-timing-function: linear;
-    -webkit-transition-timing-function: linear;
-    transition-timing-function: linear;
+    }
 }
 
 .passwordWrapper::after {
@@ -107,22 +107,19 @@ label {
 
 .error .strengthIndicator::before {
     width: 10%;
-    background-color: #d9534f;
+    background-color: $red;
 }
 
 .warning .strengthIndicator::before {
     width: 60%;
-    background-color: #f0ad4e;
+    background-color: $yellow;
 }
 
 .success .strengthIndicator::before {
     width: 100%;
-    background-color: #5cb85c;
+    background-color: $green;
 }
 
-.feedback.error, .feedback.warning, .feedback.success {
-    display: none;
-}
 
 .error .feedback.error {
     display: block;
